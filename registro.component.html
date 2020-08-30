@@ -1,0 +1,50 @@
+<div class="header">
+    <h1>Datos de Cliente</h1>
+    <p>Ingrese los datos del Cliente</p>
+    </div> 
+    <label>Nombre:</label> 
+   <input type="text" [(ngModel)]="nombre">
+    <label>Dui:</label> 
+   <input type="text" [(ngModel)]="dui"> 
+   <label>Nombre de la mascota:</label> 
+   <input type="text" [(ngModel)]="mascota">
+   <label>Tratamiento:</label> 
+   <input type="text" [(ngModel)]="tratamiento">
+   <label>Medicamento:</label> 
+   <input type="text" [(ngModel)]="medicamento">
+   <label>Costo:</label> 
+   <input type="text" [(ngModel)]="costo">
+   <label>Visita:</label> 
+   <input type="text" [(ngModel)]="visita">
+   <button class="button" (click)="ingresar()">Ingresar</button> 
+   
+   <br/>
+   <br/>
+    <table [hidden]="contador == 0"> 
+   <thead> 
+   <tr>
+   <th>Nombre</th> 
+   <th>Dui</th> 
+   <th>Nombre de la mascota</th>
+   <th>Tratamiento</th>
+   <th>Medicamento</th> 
+    <th>Costo</th>
+    <th>Visita</th>
+    <th>Descuento</th>
+    <th>Total</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let tcliente of registro">
+        <td>{{tcliente.nombre}}</td> 
+       <td>{{tcliente.dui}}</td>
+        <td>{{tcliente.mascota}}</td> 
+        <td>{{tcliente.tratamiento}}</td>
+        <td>{{tcliente.medicamento}}</td>
+        <td>{{tcliente.costo}}</td>
+        <td>{{tcliente.visita}}</td>
+        <td>{{tcliente.descuento}}</td>
+        <td>{{tcliente.total}}</td>
+       </tr> 
+       </tbody>
+        </table>
